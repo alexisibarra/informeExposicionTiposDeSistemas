@@ -1,0 +1,87 @@
+\chapter[TPS]{TPS (Transaction processing system)}
+
+
+\section {Definición}
+TPS cuyo significado en español sería sistema de procesamiento de transacciones, es un sistema recolecta, almacena, modifica y recupera toda la información generada por las transacciones producidas en una organización.
+Donde una transacción se define como un evento en el que se generan o modifican datos del sistema de información. Para que un sistema puede ser considerado TPS debe cumplir con las condiciones del ACID.
+
+
+Las condiciones del ACID son las siguientes:
+\begin {description}
+\item [Atomicidad (Atomicity):] Las acciones en el sistema son atómicas es decir ocurren o no, estas no pueden quedar a medias
+
+\item[Consistencia (Consistency):] Las transacciones en el sistema se realizan de manera correcta, es decir cumpliendo con las reglas de la base de datos. Es decir no poder colocar caracteres en un campo donde deberían ir números.
+
+\item [Aislamiento (Isolation):] Cada operación que se ejecuta en el sistema, no puede afectar a otra, es decir si se esta trabajando con dos operaciones distintas un mismo dato, no debería haber algún tipo de error.
+
+\item [Durabilidad (Durability):] Esta propiedad asegura que después de realizada una acción, ésta persistirá en el sistema y no se podrá deshacer.
+\end {description}
+\subsection {Características de los TPS}
+
+\begin {description}
+\item [Respuesta rápida:] En estos sistemas resulta crítico que que el rendimiento sea alto cuyos tiempos de respuesta sean cortos. Una empresa no puede dejar esperando al cliente por la respuesta del sistema por un largo tiempo, esto debería durar unos breves segundos o menos.
+
+\item [Fiabilidad:] Las empresas basan sus sistemas en la fiabilidad de los mismos, por lo tanto un sistema TPS debe producir la menor cantidad de fallas posibles ya que estos podrían perjudicar gravemente e sistema, y en el caso de que ocurran fallas se debe tener algún tipo de respaldo.
+
+\item [Inflexibilidad:] Cada transacción realizada en el sistema debe ser procesada de la misma manera. “Por ejemplo, una aerolínea comercial necesita aceptar de forma consistente reservas de vuelos realizadas por un gran número de agencias de viaje distintas; aceptar distintos datos de transacción de cada agencia de viajes supondría un problema”[9].
+
+\item [Procesamiento controlado:] El sistema debe respetar la organización de la empresa, es decir las actividades que realizan ciertos roles de la empresa deben ser ejecutados por las personas que trabajan bajo ese rol.
+\end {description}
+\section {Propósito}
+
+Mantener las transacciones realizadas en el sistema protegidas de fallos y errores que puedan ocurrir, tener un procesamiento amigable del manejo de estas transacciones junto con las interacciones que se realizan con otros sistemas. Además de controlar y registrar las acciones y operaciones que se realizan en el sistema, a modo de poder consultarlas en el caso de que sea necesario, para así poder tomar decisiones de las tareas que se deben llevar a cabo.
+
+\section {Estructura / Elementos / Componentes}
+
+Un sistema TPS se estructura de la siguiente manera:
+\begin{itemize}
+\item Una interfaz con el usuario que le permita la comunicación apropiada con la máquina, donde se puedan enviar y solicitar datos, además de guiar al usuario a realizar una transacción efectiva.
+\item Un controlador que pueda recibir los datos suministrados a través de la interfaz y así poder ejecutar el proceso rutina encargada de realizar la transacción.
+\item Un servidor que pueda manejar la información del sistema, este servidor debe estar en la capacidad de suministrar información a la base de datos, como también devolver información obtenida de la base de datos.
+\item Una base de datos donde se almacena  de manera organizada la información del sistema.   
+\end{itemize}
+
+\section {Información que manejan}
+
+El sistema TPS puede manejar un alto grupo de información, como por ejemplo la administración del personal de una empresa, para así poder manejar adecuadamente las nóminas de estos empleados.
+También se maneja la información de contaduría, de esto hablamos típicamente de bancos, para el manejo de transacción en cajeros automáticos o más actualmente transacciones por internet.
+Por último se puede utilizar para el manejo de administración de procesos, es decir para conocer cuando o como se aplicaron ciertos procedimientos en otro sistema, esto puede ser utilizados mayormente en fábricas o industrias para estar al tanto de como se maneja todo.
+
+
+\section {Organizaciones que típicamente utilizan TPS}
+
+Como se observó en la sección anterior, cualquier organización que maneje capital humano, puede utilizar un sistema TPS o que maneja finanzas también puede ser adquisidor de un TPS como cualquier empresa bancaria, como Banco Mercantil, Banco Provincial, etc o que realicen cualquier tipo de compraventa como Wal-Mart.
+Además cualquier industria o fábrica que necesite llevar un control de los procedimientos que se realizan en la misma.
+
+\section {Áreas o funciones que apoyan en las organizaciones}
+
+Entre las areas que se manejan en las organizaciones estan:
+\begin{itemize}
+\item Control de cuentas:	Manejo de operaciones de bienes o dineros de personas
+\item Control administrativo: Manejo de la mano de obra o capital humano que manejan las empresas.
+\item Monitoreo: Manejo de operaciones realizadas en otros sistemas.
+\end{itemize}
+
+\section {Beneficios y Desventajas}
+
+\subsection{Beneficios}
+\begin{itemize}
+\item Se puede manejar una basta cantidad de información de manera confiable, rápida y en tiempo real.
+\item Se permite llevar un control de operaciones para así evitar cualquier percance.
+\end{itemize}
+
+\subsection{Desventajas}
+\begin{itemize}
+\item Debido a la cantidad de información manejada y la gran importancia de la misma. Si ocurre una caída del sistema, las compañías perderían el control, ocasionando el tener que restituir esta información lo que quitaría un gran tiempo y dinero.
+\item Si se realiza alguna alteración invalida a la información del sistema, puede arraigar una mala organización en el sistema, al igual que una mala toma de decisiones, lo que podría traer graves problemas a las empresas.
+\end{itemize}
+
+\section {Ejemplos/ Casos de estudio}
+\subsection{Banco Mercantil}
+\begin{itemize}
+\item Esta compañía utiliza un sistema TPS en el uso de un cajero automático, estos sistemas tienen una serie de reglamentos en donde el usuario debe suministrar la información de su tarjeta junto con la clave anexa a esta, a partir de esta información el cliente, esta en la capacidad de realizar una serie de transacciones relacionadas con su cuenta monetaria, si el cliente suministró la información correcta, este podrá realizar ya sea el retiro o la consulta de su cuenta, o consulta de movimientos de su cuenta, etc.
+\end{itemize}
+\subsection{American Airlines}
+\begin{itemize}
+\item Esta compañía suministra a sus clientes un sistema TPS en la web, mediante el cual se puede realizar la reserva de boletos de avión, el cliente debe suministrar cierta información como destino, tiempo de partida, tiempo de regreso(si el pasaje es de ida y vuelta), etc. Luego de esto el sistema, verifica la información dada por el cliente junto con la información del sistema, para que el cliente pueda realizar la transacción mediante un método de pago elegido.)])))))
+\end{itemize}
